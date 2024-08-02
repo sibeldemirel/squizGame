@@ -2,7 +2,7 @@ import React from 'react'
 import { Question } from './question/Question'
 import {GameContext} from '../contexts/GameContext'
 import Level from './Level'
-import Header from './buttons/header/Header'
+import Header from './header/Header'
 
 const Layout = () => {
   const context = {}

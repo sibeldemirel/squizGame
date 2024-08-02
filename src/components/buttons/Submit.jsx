@@ -1,7 +1,10 @@
 import React from 'react'
+import './submit.css'
 
-export const Submit = () => {
+export const Submit = ({handleNextQuestion}) => {
   return (
-    <div>submit</div>
+    <div className='submitContainer'>
+      <button className='submitBtn' onClick={handleNextQuestion}>Valider</button>
+    </div>
   )
 }

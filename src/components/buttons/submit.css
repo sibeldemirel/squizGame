@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
+
+.submitContainer{
+    display: flex;
+    justify-content: right;
+}
+
+.submitBtn{
+    padding: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 20px;
+    border-radius: 15px;
+    border: 2px solid #FC68C0;
+    background-color: #FC68C0;
+    cursor: pointer;
+    color: #FBFBFB;
+}
+
+.submitBtn:hover{
+    background-color: #ffafdf;
+
+}

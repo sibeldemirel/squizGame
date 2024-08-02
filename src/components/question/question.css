@@ -1,7 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .questionContainer{
     margin: 50px auto;
-    padding: 20px;
+    padding: 50px 80px;
     background-color: #A4F4ED;
     border-radius: 30px;
     width: 800px;
+}
+
+.level{
+    margin: 0 0 20px 0;
+}
+
+.questionContent{
+    margin: 0 0 20px 0;
 }
