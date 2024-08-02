@@ -19,3 +19,17 @@
 .questionContent {
     margin: 0 0 20px 0;
 }
+
+.congrats{
+    font-size: 50px;
+    color: #FBFBFB;
+    text-shadow:
+        -1px -1px 0 #22E4D4,
+        1px -1px 0 #22E4D4,
+        -1px 1px 0 #22E4D4,
+        1px 1px 0 #22E4D4,
+        -2px -2px 0 #22E4D4,
+        2px -2px 0 #22E4D4,
+        -2px 2px 0 #22E4D4,
+        2px 2px 0 #22E4D4;
+}

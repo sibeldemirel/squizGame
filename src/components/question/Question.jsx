@@ -42,7 +42,7 @@ export const Question = () => {
   return (
     <div className='questionContainer'>
       {completed ? (
-        <h2>Bravo !</h2>
+        <h2 className='congrats'>Bravo !</h2>
       ) : (
         <>
           <h2 className='level'>Niveau {currentQuestion.id}</h2>
