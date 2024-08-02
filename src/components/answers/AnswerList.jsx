@@ -1,8 +1,7 @@
-import React from 'react'
-import './answerlist.css'
+import React from 'react';
+import './answerlist.css';
 
-const AnswerList = ({choices, selectedChoice, onSelect}) => {
-    console.log("choix", choices)
+const AnswerList = ({ choices, selectedChoice, onSelect }) => {
     return (
         <div className='answerContainer'>
             {choices.map((choice, index) => (
@@ -13,15 +12,14 @@ const AnswerList = ({choices, selectedChoice, onSelect}) => {
                         id={`choice-${index}`}
                         name="choice"
                         value={choice}
-                        // checked={selectedChoice === choice}
-                        // onChange={() => onSelect(choice)}
+                        checked={selectedChoice === choice}
+                        onChange={() => onSelect(choice)}
                     />
                     <label htmlFor={`choice-${index}`} className='answerLabel'>{choice}</label>
                 </div>
             ))}
-
         </div>
-    )
-}
+    );
+};
 
-export default AnswerList
+export default AnswerList;

@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import './question.css'
+import React, { useState } from 'react';
+import './question.css';
 import questionsData from '../../api/db.json';
 import AnswerList from '../answers/AnswerList';
 import { Submit } from '../buttons/Submit';
@@ -7,17 +7,24 @@ import { Submit } from '../buttons/Submit';
 export const Question = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedChoice, setSelectedChoice] = useState(null);
-  const [showAnswer, setShowAnswer] = useState(false);
+  const [completed, setCompleted] = useState(false);
 
   const currentQuestion = questionsData.questions[currentQuestionIndex];
 
-
   const handleNextQuestion = () => {
+    if (currentQuestionIndex < questionsData.questions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+      setSelectedChoice(null);
+    } else {
+      setCompleted(true);
+    }
+  };
+
+  const handlePreviousQuestion = () => {
     setCurrentQuestionIndex((prevIndex) =>
-      prevIndex < questionsData.questions.length - 1 ? prevIndex + 1 : 0
+      prevIndex > 0 ? prevIndex - 1 : 0
     );
     setSelectedChoice(null);
-    setShowAnswer(false);
   };
 
   const handleChoiceSelection = (choice) => {
@@ -25,19 +32,29 @@ export const Question = () => {
   };
 
   const handleSubmit = () => {
-    setShowAnswer(true);
+    if (selectedChoice === currentQuestion.answer) {
+      handleNextQuestion();
+    } else {
+      handlePreviousQuestion();
+    }
   };
 
   return (
     <div className='questionContainer'>
-      <h2 className='level'>Niveau {questionsData.questions[currentQuestionIndex].id}</h2>
-      <p className='questionContent'>{questionsData.questions[currentQuestionIndex].question}</p>
-      <AnswerList
-        choices={currentQuestion.choices}
-        selectedChoice={selectedChoice}
-        onSelect={handleChoiceSelection}
-      />
-      <Submit onClick={handleNextQuestion}/>
+      {completed ? (
+        <h2>Bravo !</h2>
+      ) : (
+        <>
+          <h2 className='level'>Niveau {currentQuestion.id}</h2>
+          <p className='questionContent'>{currentQuestion.question}</p>
+          <AnswerList
+            choices={currentQuestion.choices}
+            selectedChoice={selectedChoice}
+            onSelect={handleChoiceSelection}
+          />
+          <Submit handleNextQuestion={handleSubmit} />
+        </>
+      )}
     </div>
   );
 }

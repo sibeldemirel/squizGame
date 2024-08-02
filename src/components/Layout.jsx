@@ -1,17 +1,15 @@
 import React from 'react'
 import { Question } from './question/Question'
-import {GameContext} from '../contexts/GameContext'
-import Level from './Level'
+import { GameContext } from '../contexts/GameContext'
 import Header from './header/Header'
 
 const Layout = () => {
   const context = {}
 
   return (
-    <GameContext.Provider>
-        <Header/>
-        {/* <Level/> */}
-        <Question/>
+    <GameContext.Provider value={context}>
+      <Header />
+      <Question />
     </GameContext.Provider>
   )
 }
