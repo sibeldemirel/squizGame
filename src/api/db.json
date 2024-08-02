@@ -1,0 +1,55 @@
+{
+    "questions": [
+      {
+        "id": 1,
+        "question": "Quel est le poids moyen du cerveau humain adulte?",
+        "answer": "Environ 1,4 kilogrammes"
+      },
+      {
+        "id": 2,
+        "question": "Quel est le principal rôle du cerveau dans le corps humain?",
+        "answer": "Contrôler et réguler les fonctions corporelles et les activités mentales"
+      },
+      {
+        "id": 3,
+        "question": "Combien de neurones y a-t-il approximativement dans un cerveau humain?",
+        "answer": "Environ 86 milliards"
+      },
+      {
+        "id": 4,
+        "question": "Quelle partie du cerveau est principalement responsable de la mémoire?",
+        "answer": "L'hippocampe"
+      },
+      {
+        "id": 5,
+        "question": "Quel est le nom de la barrière qui protège le cerveau des substances nocives dans le sang?",
+        "answer": "La barrière hémato-encéphalique"
+      },
+      {
+        "id": 6,
+        "question": "Quelle région du cerveau est impliquée dans la régulation des émotions?",
+        "answer": "Le système limbique"
+      },
+      {
+        "id": 7,
+        "question": "Quel neurotransmetteur est principalement associé au plaisir et à la récompense?",
+        "answer": "La dopamine"
+      },
+      {
+        "id": 8,
+        "question": "Quel est le terme utilisé pour décrire la capacité du cerveau à se réorganiser et à former de nouvelles connexions neuronales tout au long de la vie?",
+        "answer": "La neuroplasticité"
+      },
+      {
+        "id": 9,
+        "question": "Quelle glande, située dans le cerveau, est souvent appelée le \"maître régulateur\" en raison de son rôle central dans la régulation des autres glandes endocrines?",
+        "answer": "L'hypophyse (ou glande pituitaire)"
+      },
+      {
+        "id": 10,
+        "question": "Quel scientifique est connu pour ses travaux sur le cerveau et pour avoir proposé la théorie de la localisation des fonctions cérébrales spécifiques?",
+        "answer": "Paul Broca"
+      }
+    ]
+  }
+  
